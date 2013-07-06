@@ -21,7 +21,7 @@
                 "name": "wordpress/wordpress",
                 "version": "3.5.2",
                 "dist": {
-                    "url": "http://github.com/WordPress/WordPress/archive/3.5.2.zip",
+                    "url": "http://wordpress.org/wordpress-3.5.2.zip",
                     "type": "zip"
                 }
             }
