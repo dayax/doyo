@@ -3,7 +3,7 @@
         <?php if(!is_null($subtitle=dyPostMeta('doyo_subtitle'))): ?>
         <span class="post-subtitle"><?php echo $subtitle; ?></span>
         <?php endif; ?>
-        <h2 class="entry-title"><a href="<?php echo dyGetLink(); ?>"><?php the_title(); ?></a></h2> 
+        <h2 class="entry-title"><a href="<?php echo dyGetPostLink(); ?>"><?php the_title(); ?></a></h2> 
         <?php get_template_part('templates/_post_meta')?>
     </header>
     <div class="entry-summary clearfix">

@@ -17,6 +17,7 @@ class BasicFeatureTest extends ThemeTestCase
     {
         $this->assertTrue( 'doyo' == wp_get_theme() );
         $this->assertFalse(Theme::getInstance()->isChildTheme());
+        
     }
     
     public function testShouldLoadJquery()
@@ -29,8 +30,18 @@ class BasicFeatureTest extends ThemeTestCase
         $this->assertScriptLoaded('modernizr');
     }
     
-    public function testShouldLoadBootstrapCss()
+    public function testShouldLoadDefaultBootstrapScripts()
+    {
+        $this->assertScriptLoaded('doyo-bootstrap-tab');
+        
+    }
+    public function testShouldLoadAppScript()
     {        
+        $this->assertScriptLoaded('doyo-app');
+    }
+    
+    public function testShouldLoadBootstrapCss()
+    {                                
         $this->assertStyleLoaded('doyo-bootstrap');
     }
     
@@ -42,5 +53,20 @@ class BasicFeatureTest extends ThemeTestCase
     public function testShouldLoadThemeCss()
     {        
         $this->assertStyleLoaded('doyo-theme');
+    }        
+    
+    public function testShouldSupportQuotePostFormat()
+    {
+        $this->assertTrue(current_theme_supports('quote'));
     }
+    
+    public function testShouldSupportLinkPostFormat()
+    {
+        $this->assertTrue(current_theme_supports('link'));
+    }
+    
+    public function testShouldSupportStatusPostFormat()
+    {
+        $this->assertTrue(current_theme_supports('status'));
+    }        
 }

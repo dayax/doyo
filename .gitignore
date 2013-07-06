@@ -2,3 +2,4 @@ vendor
 autoload.php
 tests/fixtures/wordpress
 composer.lock
+tests/report

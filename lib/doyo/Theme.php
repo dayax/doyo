@@ -35,9 +35,10 @@ class Theme
     
     public function enqueueScripts()
     {
+        wp_enqueue_style('doyo-bootstrap',__DIR__.'/less/bootstrap.less');
         if($this->isChildTheme()){            
             wp_enqueue_style('doyo-child-style',get_stylesheet_uri());
-        }
+        }        
     }
     
     public function cleanupScripts()
