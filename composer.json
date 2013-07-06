@@ -11,7 +11,7 @@
     ],
     "autoload": {
         "psr-0": {
-            "doyo": ["lib/","tests/"]
+            "doyo": ["lib/","tests/unit/"]
         }
     },
     "repositories": [
