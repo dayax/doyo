@@ -22,4 +22,4 @@ before_script:
     - COMPOSER_ROOT_VERSION=dev-master composer --prefer-source --dev install
     
 script:
-    - phpunit -c tests --coverage-text --testdox
+    - phpunit -c tests --testdox
