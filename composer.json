@@ -1,0 +1,55 @@
+{
+    "name": "tonimunthi/blog",
+    "description": "The Twitter Bootstrap WordPress Theme",
+    "license": "MIT",
+    "type": "wordpress-theme",
+    "authors": [
+        {
+            "name": "Anthonius Munthi",
+            "email": "me@itstoni.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "doyo": ["lib/","tests/"]
+        }
+    },
+    "repositories": [
+        {
+            "type": "package",
+            "package":{
+                "name": "wordpress/wordpress",
+                "version": "3.5.2",
+                "dist": {
+                    "url": "https://github.com/WordPress/WordPress/archive/3.5.2.zip",
+                    "type": "zip"
+                }
+            }
+        }
+    ],
+    "require": {
+        "composer/installers": "~1.0"
+    },
+    "require-dev": {
+        "twitter/bootstrap": "2.3.x",
+        "fortawesome/font-awesome": "3.2.x",
+        "leafo/lessphp": "0.3.x",
+        "tedivm/jshrink": "*",
+        "symfony/finder": "2.3.x",
+        "symfony/filesystem": "2.3.x",
+        
+        "wordpress/wordpress": "3.5.2",
+        "dayax/wordpress-test": "dev-composer",
+        
+        "phpunit/phpunit": "*"
+    },
+    "extra": {
+        "installer-paths": {
+            "wp-content/themes/{$name}": ["type:wordpress-theme"]
+        }
+    },
+    "minimum-stability": "stable",
+    "config": {
+        "bin-dir": "bin/"
+    }
+}
