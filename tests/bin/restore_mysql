@@ -1,0 +1,17 @@
+#!/usr/bin/env php
+<?php
+
+$root_dir = realpath(__DIR__.'/../');
+
+if(!is_file($file=$root_dir.'/autoload.php')){
+    $file = $root_dir.'/autoload.php.dist';
+}
+if(!is_file($file)){
+    throw new LogicException('File "autoload.php" or "autoload.php.dist" not exists');
+}
+require_once $file;
+
+$file = realpath($root_dir.'/fixtures/wp_cli_test.bz2');
+$cmd = "bunzip2 -c ".$file." | mysql -h ".DB_HOST." -u".DB_USER." -p".DB_PASSWORD.' '.DB_NAME;
+
+passthru($cmd);

@@ -12,11 +12,12 @@ matrix:
         - php: 5.5
         
 before_script:
-    # set up database
-    - mysql -e 'CREATE DATABASE wp_cli_test;' -uroot
-    - mysql -e 'GRANT ALL PRIVILEGES ON wp_cli_test.* TO "wp_cli_test"@"localhost" IDENTIFIED BY "password1"' -uroot    
     - COMPOSER_ROOT_VERSION=dev-master composer selfupdate
     - COMPOSER_ROOT_VERSION=dev-master composer --dev install
+    # set up database
+    - mysql -e 'CREATE DATABASE wp_cli_test;' -uroot
+    - mysql -e 'GRANT ALL PRIVILEGES ON wp_cli_test.* TO "wp_cli_test"@"localhost" IDENTIFIED BY "password1"' -uroot
+    - tests/bin/restore_mysql
     
 script:
     - phpunit -c tests --testdox --coverage-text

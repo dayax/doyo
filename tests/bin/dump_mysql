@@ -1,0 +1,2 @@
+#!/bin/bash
+mysqldump --add-drop-table -h localhost -uwp_cli_test -ppassword1 wp_cli_test | bzip2 -c > tests/fixtures/wp_cli_test.bz2
