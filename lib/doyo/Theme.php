@@ -15,7 +15,14 @@ class Theme
 {
     static $instance;
     
-    private function __construct(){}
+    protected $options = array(
+        'mode' => 'live',
+    );
+    
+    private function __construct()
+    {
+        $this->init();
+    }
         
     /**
      * @return Theme
@@ -41,7 +48,14 @@ class Theme
         }        
     }
     
-
+    public function init()
+    {
+        global $ot_loader;
+        
+        $options = get_option('option_tree');
+        
+    }
+    
     /**
      * Sets up theme defaults and registers the various WordPress features that
      * doyo theme supports.
@@ -88,5 +102,10 @@ class Theme
     public function cleanupScripts()
     {
         
+    }
+    
+    public function isLive()
+    {
+        return $this->options['mode']==='live' ? true:false;
     }
 }

@@ -11,7 +11,7 @@
 
 namespace doyo\tests;
 
-class OpenGraphTest extends ThemeTestCase
+class OpenGraphTest extends BaseTestCase
 {
     public function setUp()
     {

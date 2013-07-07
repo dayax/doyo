@@ -11,7 +11,7 @@
 
 namespace doyo\tests;
 
-class ThemeCompilerTest extends ThemeTestCase
+class ThemeCompilerTest extends BaseTestCase
 {
     
 }

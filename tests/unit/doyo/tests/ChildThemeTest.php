@@ -11,7 +11,7 @@
 
 namespace doyo\tests;
 use \doyo\Theme;
-class ChildThemeTest extends ThemeTestCase
+class ChildThemeTest extends BaseTestCase
 {
 
     public function setUp()
@@ -31,8 +31,6 @@ class ChildThemeTest extends ThemeTestCase
     public function testShouldLoadChildStyle()
     {                        
         $this->assertStyleLoaded('doyo-child-style');        
-    }
-    
-    
+    }        
     
 }

@@ -11,7 +11,7 @@
 
 namespace doyo\tests;
 use \doyo\Theme;
-class BasicFeatureTest extends ThemeTestCase
+class BasicFeatureTest extends BaseTestCase
 {
     public function testShouldLoadDoyoTheme()
     {
