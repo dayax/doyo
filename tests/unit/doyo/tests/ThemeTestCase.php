@@ -11,18 +11,20 @@
 
 namespace doyo\tests;
 
-abstract class ThemeTestCase extends \WP_UnitTestCase
+use \dayax\wordpress\ThemeTestCase as BaseTestCase;
+
+abstract class ThemeTestCase extends BaseTestCase
 {
     public function setUp()
     {
         parent::setUp();
+        $GLOBALS['wp_theme_directories'][] = dirname(DOYO_ROOT_DIR);
         switch_theme('doyo','doyo');
         require_once DOYO_ROOT_DIR.'/functions.php';
     }
     
     public function assertStyleLoaded($style)
-    {
-        //$this->assertFalse(wp_style_is($style));
+    {        
         do_action('wp_enqueue_scripts');
         $ret = wp_style_is($style);        
         if(false===$ret){

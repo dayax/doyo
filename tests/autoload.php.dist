@@ -1,8 +1,9 @@
 <?php
 
 define('DOYO_ROOT_DIR',realpath(__DIR__.'/../'));
-
+define('WORDPRESS_DIR',DOYO_ROOT_DIR.'/vendor/wordpress/wordpress');
+define('ABSPATH',WORDPRESS_DIR.'/');
 require_once __DIR__.'/../vendor/autoload.php';
-require_once __DIR__.'/build-fixtures.php';
-require_once __DIR__.'/bootstrap.php';
+require_once __DIR__.'/wp-config.php';
+
 ?>

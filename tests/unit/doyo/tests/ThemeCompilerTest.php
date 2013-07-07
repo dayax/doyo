@@ -11,17 +11,7 @@
 
 namespace doyo\tests;
 
-class OpenGraphTest extends ThemeTestCase
+class ThemeCompilerTest extends ThemeTestCase
 {
-    public function setUp()
-    {
-        parent::setUp();
-        do_action('wp');
-    }
     
-    public function testShouldCreateOpenGraphTagForHomepage()
-    {
-        
-        
-    }
 }

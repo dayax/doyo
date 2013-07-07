@@ -16,12 +16,11 @@ class BasicFeatureTest extends ThemeTestCase
     public function testShouldLoadDoyoTheme()
     {
         $this->assertTrue( 'doyo' == wp_get_theme() );
-        $this->assertFalse(Theme::getInstance()->isChildTheme());
-        
+        $this->assertFalse(Theme::getInstance()->isChildTheme());        
     }
     
     public function testShouldLoadJquery()
-    {
+    {        
         $this->assertScriptLoaded('jquery');
     }
     

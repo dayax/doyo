@@ -7,9 +7,13 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'doyo' => array($baseDir . '/lib', $baseDir . '/tests/unit'),
-    'Symfony\\Component\\Yaml\\' => array($vendorDir . '/symfony/yaml'),
+    'dayax' => array($vendorDir . '/dayax/wordpress-test/src', $vendorDir . '/dayax/wordpress-test/tests'),
+    'Symfony\\Component\\Process\\' => array($vendorDir . '/symfony/process'),
     'Symfony\\Component\\Finder\\' => array($vendorDir . '/symfony/finder'),
     'Symfony\\Component\\Filesystem\\' => array($vendorDir . '/symfony/filesystem'),
+    'Symfony\\Component\\DomCrawler\\' => array($vendorDir . '/symfony/dom-crawler'),
+    'Symfony\\Component\\CssSelector\\' => array($vendorDir . '/symfony/css-selector'),
+    'Symfony\\Component\\BrowserKit\\' => array($vendorDir . '/symfony/browser-kit'),
     'JShrink' => array($vendorDir . '/tedivm/jshrink/src'),
     'Composer\\Installers\\' => array($vendorDir . '/composer/installers/src'),
 );
