@@ -14,6 +14,19 @@
             "doyo": ["lib/","tests/unit/"]
         }
     },
+    "repositories": [
+        {
+            "type": "package",
+            "package":{
+                "name": "wordpress/wordpress",
+                "version": "3.5.2",
+                "dist": {
+                    "url": "http://wordpress.org/wordpress-3.5.2.zip",
+                    "type": "zip"
+                }
+            }
+        }
+    ],
     "require": {
         "composer/installers": "~1.0"
     },
